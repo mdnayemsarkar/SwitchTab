@@ -10,9 +10,9 @@ const SukunApp = () => {
   const [enabled4, setEnabled4] = useState(false);
   const [enabled5, setEnabled5] = useState(false);
   const [enabled6, setEnabled6] = useState(false);
-
+  const [enabled7, setEnabled7] = useState(false);
   return (
-    <div className="bg-hero-pattern bg-cover bg-center h-[420px] w-[325px] overflow-hidden text-white p-4">
+    <div className="bg-hero-pattern bg-cover bg-center h-[450px] w-[325px] overflow-hidden text-white p-4">
       {/* Header Section */}
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold flex items-center gap-2">
@@ -55,7 +55,7 @@ const SukunApp = () => {
       </h2>
       <div className="mt-4 px-4 text-xs">
         <div className="flex justify-between items-center">
-          <p>Hide Image 1</p>
+          <p>Hide Images</p>
           {/* Toggle Switch 1 */}
           <Switch
             checked={enabled1}
@@ -78,7 +78,7 @@ const SukunApp = () => {
       {/* Toggle Section 2 */}
       <div className="mt-4 px-4 text-xs">
         <div className="flex justify-between items-center">
-          <p>Hide Image 2</p>
+          <p>Hide Images</p>
           {/* Toggle Switch 2 */}
           <Switch
             checked={enabled2}
@@ -101,7 +101,7 @@ const SukunApp = () => {
       {/* Toggle Section 3 */}
       <div className="mt-4 px-4 text-xs">
         <div className="flex justify-between items-center">
-          <p>Hide Image 3</p>
+          <p>Hide Images</p>
           {/* Toggle Switch 3 */}
           <Switch
             checked={enabled3}
@@ -124,7 +124,7 @@ const SukunApp = () => {
       {/* Toggle Section 4 */}
       <div className="mt-4 px-4 text-xs">
         <div className="flex justify-between items-center">
-          <p>Hide Image 4</p>
+          <p>Hide Images</p>
           {/* Toggle Switch 4 */}
           <Switch
             checked={enabled4}
@@ -147,7 +147,7 @@ const SukunApp = () => {
       {/* Toggle Section 5 */}
       <div className="mt-4 px-4 text-xs">
         <div className="flex justify-between items-center">
-          <p>Hide Image 5</p>
+          <p>Hide Images</p>
           {/* Toggle Switch 5 */}
           <Switch
             checked={enabled5}
@@ -170,11 +170,33 @@ const SukunApp = () => {
       {/* Toggle Section 6 */}
       <div className="mt-4 px-4 text-xs">
         <div className="flex justify-between items-center">
-          <p>Hide Image 6</p>
+          <p>Hide Images</p>
+          {/* Toggle Switch 6 */}
+          <Switch
+            checked={enabled7}
+            onChange={setEnabled6}
+            className={`relative flex h-5 w-10 cursor-pointer rounded-full p-1 transition-colors duration-200 ease-in-out focus:outline-none ${
+              enabled6 ? "bg-green-500" : "bg-gray-500"
+            }`}
+          >
+            <span
+              aria-hidden="true"
+              className={`inline-block h-3 w-3 transform rounded-full bg-white shadow-lg transition duration-200 ease-in-out ${
+                enabled6 ? "translate-x-5" : "translate-x-0"
+              }`}
+            />
+          </Switch>
+        </div>
+        <hr className="mt-1 border-gray-300/50" />
+      </div>
+      {/* toggle switch 7  */}
+      <div className="mt-4 px-4 text-xs">
+        <div className="flex justify-between items-center">
+          <p>Hide Images</p>
           {/* Toggle Switch 6 */}
           <Switch
             checked={enabled6}
-            onChange={setEnabled6}
+            onChange={setEnabled7}
             className={`relative flex h-5 w-10 cursor-pointer rounded-full p-1 transition-colors duration-200 ease-in-out focus:outline-none ${
               enabled6 ? "bg-green-500" : "bg-gray-500"
             }`}
