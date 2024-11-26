@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@media (forced-colors: active) {
+  /* Define styles for forced colors mode */
+  button {
+    background-color: ButtonFace;
+    color: ButtonText;
+  }
+}
+/* Disable deprecated properties */
+[data-high-contrast] {
+  -ms-high-contrast: none !important;
+  -ms-high-contrast-adjust: none !important;
+}
